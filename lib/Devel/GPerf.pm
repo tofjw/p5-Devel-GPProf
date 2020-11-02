@@ -1,6 +1,5 @@
 package Devel::GPerf;
 
-use 5.030000;
 use strict;
 use warnings;
 
@@ -17,7 +16,7 @@ our @ISA = qw(Exporter);
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
 our %EXPORT_TAGS = ( 'all' => [ qw(
-	
+profiler_start profiler_stop profiler_flush	
 ) ] );
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
@@ -75,15 +74,14 @@ If you have a web site set up for your module, mention it here.
 
 =head1 AUTHOR
 
-A. U. Thor, E<lt>tofjw@E<gt>
+Toshimitsu FUJIWARA
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2020 by A. U. Thor
+Copyright (C) 2020 by Toshimitsu FUJIWARA
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.30.0 or,
-at your option, any later version of Perl 5 you may have available.
+it under the same terms as Perl itself,
 
 
 =cut
