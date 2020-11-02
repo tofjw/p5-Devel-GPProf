@@ -1,0 +1,6 @@
+Revision history for Perl extension Devel::GPerf.
+
+0.01  Mon Nov  2 06:19:40 2020
+	- original version; created by h2xs 1.23 with options
+		-c /usr/include/gperftools/profiler.h -n Devel::GPerf
+
