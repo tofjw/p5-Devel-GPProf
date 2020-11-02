@@ -10,3 +10,22 @@
 
 MODULE = Devel::GPerf		PACKAGE = Devel::GPerf		
 
+int
+profiler_start(fname)
+    const char* fname;
+CODE:
+    RETVAL = ProfilerStart(fname);
+OUTPUT:
+    RETVAL
+ 
+void
+profiler_stop()
+CODE:
+    ProfilerStop();
+ 
+void
+profiler_flush()
+CODE:
+    ProfilerFlush();
+
+ 
