@@ -8,7 +8,7 @@
 #include <gperftools/profiler.h>
 
 
-MODULE = Devel::GPerf		PACKAGE = Devel::GPerf		
+MODULE = Devel::GPProf		PACKAGE = Devel::GPProf		
 
 int
 profiler_start(fname)

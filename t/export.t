@@ -2,9 +2,9 @@ use strict;
 use warnings;
 
 use Test::More tests => 2;
-BEGIN { use_ok('Devel::GPerf') };
+BEGIN { use_ok('Devel::GPProf') };
 
-use Devel::GPerf qw(:all);
+use Devel::GPProf qw(:all);
 
 #########################
 

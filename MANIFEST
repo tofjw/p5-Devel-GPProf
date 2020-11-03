@@ -1,8 +1,8 @@
 Changes
-GPerf.xs
+GPProf.xs
 Makefile.PL
 MANIFEST
 ppport.h
 README
-t/Devel-GPerf.t
-lib/Devel/GPerf.pm
+t/Devel-GPProf.t
+lib/Devel/GPProf.pm
