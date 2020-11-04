@@ -58,20 +58,26 @@ __END__
 
 =head1 NAME
 
-Devel::GPProf - Perl extension for blah blah blah
+Devel::GPProf - Perl interface for Google Performance Tools
 
 =head1 SYNOPSIS
 
-  use Devel::GPProf;
-  blah blah blah
+  use Devel::GPProf qw(:all);
+
+  profiler_start("prof.out");
+
+  # your heavy code
+
+  profiler_stop;
+
+or run from command line:
+
+    $ perl -MDevel::GPProf your_script.pl
 
 =head1 DESCRIPTION
 
-Stub documentation for Devel::GPProf, created by h2xs. It looks like the
-author of the extension was negligent enough to leave the stub
-unedited.
-
-Blah blah blah.
+This module is NOT a profiler for Perl code but a native code.
+You can profile functions used in XS module and Perl internals.
 
 =head2 EXPORT
 
@@ -81,14 +87,8 @@ None by default.
 
 =head1 SEE ALSO
 
-Mention other useful documentation such as the documentation of
-related modules or operating system documentation (such as man pages
-in UNIX), or any relevant external documentation such as RFCs or
-standards.
-
-If you have a mailing list set up for your module, mention it here.
-
-If you have a web site set up for your module, mention it here.
+https://github.com/gperftools/gperftools
+(CPU PROFILER section)
 
 =head1 AUTHOR
 
