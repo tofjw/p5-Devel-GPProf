@@ -32,6 +32,24 @@ XSLoader::load('Devel::GPProf', $VERSION);
 
 # Preloaded methods go here.
 
+my $started_by_option;
+
+sub import {
+    my ($package, $filename, $line) = caller;
+    if ($package eq "main" && $line == 0) {
+	&profiler_start("prof.out");
+	$started_by_option = 1;
+    }
+    goto &Exporter::import;
+}
+
+sub END {
+    if ($started_by_option) {
+	&profiler_stop;
+	$started_by_option = 0;
+    }
+}
+
 # Autoload methods go after =cut, and are processed by the autosplit program.
 
 1;
