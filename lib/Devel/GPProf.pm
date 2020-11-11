@@ -79,11 +79,29 @@ or run from command line:
 This module is NOT a profiler for Perl code but a native code.
 You can profile functions used in XS module and Perl internals.
 
+=head2 FUNCTIONS
+
+=over 4
+
+=item profiler_start(fname)
+
+Start profiling and write profile info into fname.
+
+=item profiler_stop
+
+Stop profiling. 
+
+=item profiler_flush
+
+Flush any currently buffered profiling state to the profile file.
+
+=back
+
 =head2 EXPORT
 
 None by default.
 
-
+All functions are exported with tag :all.
 
 =head1 SEE ALSO
 

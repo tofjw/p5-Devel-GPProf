@@ -21,9 +21,25 @@ or run from command line:
 This module is NOT a profiler for Perl code but a native code.
 You can profile functions used in XS module and Perl internals.
 
+## FUNCTIONS
+
+- profiler\_start(fname)
+
+    Start profiling and write profile info into fname.
+
+- profiler\_stop
+
+    Stop profiling. 
+
+- profiler\_flush
+
+    Flush any currently buffered profiling state to the profile file.
+
 ## EXPORT
 
 None by default.
+
+All functions are exported with tag :all.
 
 # SEE ALSO
 
